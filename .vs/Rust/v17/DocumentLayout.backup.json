@@ -1,0 +1,85 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\src\\jugador.rs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cuadro_movil\\src\\jugador.rs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\src\\main.rs||{3B902123-F8A7-4915-9F01-361F908088D0}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cuadro_movil\\src\\main.rs||{3B902123-F8A7-4915-9F01-361F908088D0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\Cargo.toml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:cuadro_movil\\Cargo.toml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\CuadroMovil\\Cargo.toml||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CuadroMovil\\Cargo.toml||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "jugador.rs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\src\\jugador.rs",
+              "RelativeDocumentMoniker": "cuadro_movil\\src\\jugador.rs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\src\\jugador.rs",
+              "RelativeToolTip": "cuadro_movil\\src\\jugador.rs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowCIAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-11T04:06:18.177Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "main.rs",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\src\\main.rs",
+              "RelativeDocumentMoniker": "cuadro_movil\\src\\main.rs",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\src\\main.rs",
+              "RelativeToolTip": "cuadro_movil\\src\\main.rs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAowBUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-08T14:26:01.2Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cargo.toml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\Cargo.toml",
+              "RelativeDocumentMoniker": "cuadro_movil\\Cargo.toml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\cuadro_movil\\Cargo.toml",
+              "RelativeToolTip": "cuadro_movil\\Cargo.toml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-08T14:25:44.564Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Cargo.toml",
+              "DocumentMoniker": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\CuadroMovil\\Cargo.toml",
+              "RelativeDocumentMoniker": "CuadroMovil\\Cargo.toml",
+              "ToolTip": "C:\\Users\\Admin\\Documents\\2026-1\\Dinamicos2\\Rust\\CuadroMovil\\Cargo.toml",
+              "RelativeToolTip": "CuadroMovil\\Cargo.toml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2026-02-08T14:23:57.092Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
