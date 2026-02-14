@@ -2,6 +2,7 @@
 use macroquad::prelude::*;
 
 
+mod gravedad;
 mod jugador; 
 
 // 2. Traemos el struct al alcance actual
