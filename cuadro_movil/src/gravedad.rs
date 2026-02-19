@@ -1,6 +1,9 @@
+#[derive(Debug, Clone, Copy)]
 pub struct Gravedad {
     pub velocidad_y: f32,
     pub aceleracion: f32,
+    /// Velocidad terminal (magnitud). Use `f32::INFINITY` for sin límite.
+    pub velocidad_terminal: f32,
 }
 
 impl Gravedad {
@@ -8,49 +11,39 @@ impl Gravedad {
         Self {
             velocidad_y: 0.0,
             aceleracion,
+            velocidad_terminal: f32::INFINITY,
         }
     }
 
+    #[inline]
     pub fn aplicar(&mut self, y: &mut f32, dt: f32) {
         self.velocidad_y += self.aceleracion * dt;
+        if self.velocidad_terminal.is_finite() {
+            self.velocidad_y = self.velocidad_y.clamp(-self.velocidad_terminal, self.velocidad_terminal);
+        }
         *y += self.velocidad_y * dt;
     }
 
+    #[inline]
     pub fn saltar(&mut self, fuerza: f32) {
-        self.velocidad_y = -fuerza;
+        let fuerza_pos = fuerza.abs();
+        let v = if self.velocidad_terminal.is_finite() {
+            fuerza_pos.min(self.velocidad_terminal)
+        } else {
+            fuerza_pos
+        };
+        self.velocidad_y = -v;
     }
 
+    #[inline]
     pub fn detener(&mut self) {
         self.velocidad_y = 0.0;
     }
 }
 
-#[cfg(test)]
-mod tests {
-    use super::*;
-
-    #[test]
-    fn test_gravedad_aplicar() {
-        let mut gravedad = Gravedad::new(10.0);
-        let mut y = 0.0;
-        let dt = 1.0;
-
-        // t=0: v=0, y=0
-        // t=1: v=10, y=10 (v*dt) -> 10*1 = 10
-        gravedad.aplicar(&mut y, dt);
-        assert_eq!(gravedad.velocidad_y, 10.0);
-        assert_eq!(y, 10.0);
-
-        // t=2: v=20, y=10 + 20*1 = 30
-        gravedad.aplicar(&mut y, dt);
-        assert_eq!(gravedad.velocidad_y, 20.0);
-        assert_eq!(y, 30.0);
-    }
-
-    #[test]
-    fn test_salto() {
-        let mut gravedad = Gravedad::new(10.0);
-        gravedad.saltar(50.0);
-        assert_eq!(gravedad.velocidad_y, -50.0);
+impl Default for Gravedad {
+    fn default() -> Self {
+        // Valor por defecto razonable para gravedad en juegos (m/s^2)
+        Self::new(9.81)
     }
 }

@@ -1,0 +1,12 @@
+# Visual Studio
+.vs/
+*.slnx
+*.sln.ids
+
+# Rust
+target/
+Cargo.lock
+
+# OS
+Thumbs.db
+.DS_Store
