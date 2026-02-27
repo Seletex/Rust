@@ -1,8 +1,8 @@
-// src/main.rs
 use macroquad::prelude::*;
 
 
 mod gravedad;
+mod submarino;
 mod jugador; 
 
 // 2. Traemos el struct al alcance actual

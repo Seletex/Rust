@@ -30,7 +30,7 @@ impl Jugador {
         // Aplicar Gravedad
         self.gravedad.aplicar(&mut self.y, dt);
 
-        // Colisión con el suelo (simple)
+        
         if self.y > screen_height() - self.tamano {
             self.y = screen_height() - self.tamano;
             self.gravedad.detener();
