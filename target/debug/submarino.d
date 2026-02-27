@@ -1,0 +1,1 @@
+C:\Users\Admin\source\repos\Seletex\Rust\submarino\target\debug\submarino.exe: C:\Users\Admin\source\repos\Seletex\Rust\submarino\src\main.rs C:\Users\Admin\source\repos\Seletex\Rust\submarino\src\modulos\fisicas\eje_y.rs C:\Users\Admin\source\repos\Seletex\Rust\submarino\src\modulos\fisicas\mod.rs C:\Users\Admin\source\repos\Seletex\Rust\submarino\src\modulos\mod.rs
