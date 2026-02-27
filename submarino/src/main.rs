@@ -5,7 +5,7 @@ fn main() {
     println!("Iniciando simulación del submarino...");
     
     // Suponiendo que la pantalla tiene 500 de alto, la mitad es 250
-    let mut submarino_y = FisicasEjeY::new(250.0);
+    let mut submarino_y = FisicasEjeY::new(0.0);
     
     println!("Posición inicial: {}", submarino_y.posicion);
     

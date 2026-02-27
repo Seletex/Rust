@@ -19,7 +19,7 @@ impl FisicasEjeY {
             gravedad: 9.8,
             volumen: 0.001,
             densidad_agua: 10.0,
-            friccion: 0.01,
+            friccion: 0.1,
             dt: 0.1,
         }
     }
@@ -36,7 +36,7 @@ impl FisicasEjeY {
 
         let fuerza_neta = f_gravedad - f_flotabilidad + f_friccion;
 
-        println!("Gravedad: {:.2}N | Flotabilidad: {:.2}N | Fricción: {:.2}N", f_gravedad, f_flotabilidad, f_friccion);
+        println!("Peso: {:.2}N | Flotabilidad: {:.2}N | Fricción: {:.2}N", f_gravedad, f_flotabilidad, f_friccion);
         println!("Fuerza Neta: {:.2}N", fuerza_neta);
 
         let aceleracion = fuerza_neta / self.masa;
