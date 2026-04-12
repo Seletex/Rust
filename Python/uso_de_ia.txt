@@ -1,0 +1,26 @@
+INFORME: USO DE INTELIGENCIA ARTIFICIAL EN EL PROYECTO SIMUOS
+
+Este informe detalla cómo se utilizó la Inteligencia Artificial (IA) como herramienta de "Pair Programming" para el desarrollo del simulador de Scheduler de Procesos.
+
+1. INTERPRETACIÓN DE REQUISITOS COMPLEJOS
+La IA permitió traducir requerimientos técnicos abstractos en lógica de programación ejecutable. 
+- Ejemplo: La solicitud de "exclusión mutua basada en puertos TCP" se tradujo en una estructura de diccionarios que mapean recursos a PIDs y una lógica de condicionales que bloquean o permiten el paso al estado "corriendo".
+
+2. DISEÑO ITERATIVO DE LA INTERFAZ (UI/UX)
+El desarrollo visual fue un proceso colaborativo:
+- El usuario solicitó un "look premium". La IA propuso inicialmente un diseño "Dark Mode" de vanguardia.
+- Al refinar el requerimiento hacia el "estilo original", la IA fue capaz de revertir la estética a bloques clásicos manteniendo las funcionalidades modernas (terminal y monitores).
+
+3. RESOLUCIÓN DE PROBLEMAS TÉCNICOS (DEBUGGING)
+Durante el desarrollo, surgieron obstáculos técnicos que la IA resolvió en tiempo real:
+- Problemas de Foco: Cuando el usuario reportó que no podía escribir en la terminal, la IA diagnosticó un problema de jerarquía de widgets y aplicó métodos como focus_set() y reestructuración de frames.
+- Visibilidad: La IA ajustó dinámicamente el tamaño de la ventana (geometry) y las reglas de empaquetamiento (pack) para asegurar que el sistema fuera usable en diferentes pantallas.
+
+4. LÓGICA DE SCHEDULER Y COLAS FIFO
+La IA implementó la lógica de "despertar" procesos. En un sistema convencional, un proceso simplemente termina. Aquí, la IA programó una respuesta en cadena: cuando un proceso libera un puerto (evento A), el sistema busca en la lista de espera y activa al siguiente (evento B), simulando el comportamiento autónomo de un Kernel real.
+
+5. ANÁLISIS CONCEPTUAL Y COMPARATIVO
+Más allá del código, la IA funcionó como un consultor académico, proporcionando una comparación técnica detallada entre el simulador desarrollado y un sistema operativo comercial (Windows/Linux), explicando conceptos como Preemption, Aging, MLFQ y Context Switching.
+
+CONCLUSIÓN
+La IA no solo generó el código, sino que actuó como un puente entre la visión pedagógica del usuario y la implementación técnica, permitiendo crear en minutos un sistema que integra lógica de sistemas operativos, diseño de interfaces y una consola de comandos funcional.
