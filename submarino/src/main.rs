@@ -72,6 +72,7 @@ async fn main() {
         let cx = screen_width() / 2.0;
         let cy = screen_height() / 2.0;
         draw_circle_lines(cx, cy, 30.0, 1.0, BLUE);
+        // Controles para cambiar la flotabilidad (llenar/vaciar tanques)
         let orden = if is_key_down(KeyCode::Down) || is_key_down(KeyCode::S) {
             Orden::Bajar
         } else if is_key_down(KeyCode::Up) || is_key_down(KeyCode::W) {
