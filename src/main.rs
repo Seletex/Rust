@@ -1,5 +1,6 @@
 use macroquad::prelude::*;
 
+#[derive(Clone, Copy)]
 struct Submarino {
     posicion: f32,
     velocidad: f32,
@@ -10,6 +11,7 @@ struct Configuracion {
     friccion: f32,
     masa: f32,
 }
+#[derive(Clone, Copy)]
 enum Orden {
     Subir,
     Bajar,
@@ -62,17 +64,8 @@ async fn main() {
         friccion: 20.0,
         masa: 100.0,
     };
-
-    loop {
-        clear_background(BLACK);
-
+    let mut simulacion = std::iter::repeat(()).scan(submarino, |estado, _| {
         let dt = get_frame_time();
-
-        // Dibujar círculo de referencia en el centro
-        let cx = screen_width() / 2.0;
-        let cy = screen_height() / 2.0;
-        draw_circle_lines(cx, cy, 30.0, 1.0, BLUE);
-        // Controles para cambiar la flotabilidad (llenar/vaciar tanques)
         let orden = if is_key_down(KeyCode::Down) || is_key_down(KeyCode::S) {
             Orden::Bajar
         } else if is_key_down(KeyCode::Up) || is_key_down(KeyCode::W) {
@@ -80,16 +73,32 @@ async fn main() {
         } else {
             Orden::Nada
         };
-        // Controles para cambiar la flotabilidad (llenar/vaciar tanques)
-        submarino = controles(submarino, orden, dt);
-        submarino = actualizar_estado(submarino, dt, &configuracion, |submarino, configuracion| {
-            let fuerzas = [
+        *estado = controles(*estado, orden, dt);
+        *estado = actualizar_estado(*estado, dt, &configuracion, |submarino, configuracion| {
+            [
                 configuracion.masa * configuracion.gravedad,
                 -submarino.flotabilidad,
                 configuracion.friccion * submarino.velocidad,
-            ];
-            fuerzas.iter().sum()
+            ]
+            .into_iter()
+            .map(|f| f * 1.0)
+            .sum()
         });
+        Some(*estado)
+    });
+
+    loop {
+        clear_background(BLACK);
+
+        if let Some(estado) = simulacion.next() {
+            submarino = estado;
+        }
+        // Dibujar círculo de referencia en el centro
+        let cx = screen_width() / 2.0;
+        let cy = screen_height() / 2.0;
+        draw_circle_lines(cx, cy, 30.0, 1.0, BLUE);
+        // Controles para cambiar la flotabilidad (llenar/vaciar tanques)
+
         // Dibujar el submarino (un círculo gris oscuro)
         let x = screen_width() / 2.0;
         let y = submarino.posicion;
