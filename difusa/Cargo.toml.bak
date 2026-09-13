@@ -1,0 +1,16 @@
+[package]
+name = "difusa"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = { version = "0.19", default-features = false, features = [
+    "2d",
+    "x11",
+    "tonemapping_luts",
+    "bevy_winit",
+    "bevy_render",
+    "png",
+    "zstd_rust",
+    "wav" # Se añade soporte explícito para archivos WAV
+] }
