@@ -26,3 +26,13 @@ pub struct Meta;
 
 #[derive(Component)]
 pub struct MusicaFondo;
+
+#[derive(Component)]
+pub struct EnSuelo(pub bool);
+
+#[derive(Component)]
+#[allow(dead_code)]
+pub struct SpriteSize {
+    pub width: f32,
+    pub height: f32,
+}

@@ -3,19 +3,29 @@
 #[derive(States, Debug, Clone, PartialEq, Eq, Hash, Default)]
 pub enum GameState {
     #[default]
-    Inicio,
+    Menu,
     Jugando,
+    GameOver,
     Victoria,
-    Derrota,
 }
 
 #[derive(Message)]
-pub struct EventoMovimientoJugador {
-    pub moviendose: bool,
+pub struct EventoSaltoJugador;
+
+#[derive(Message)]
+#[allow(dead_code)]
+pub struct EventoColisionObstaculo {
+    pub entidad_obstaculo: Entity,
 }
 
 #[derive(Message)]
-pub struct EventoJuegoPerdido;
+pub struct EventoToroAtrapaJugador;
 
 #[derive(Message)]
-pub struct EventoJuegoGanado;
+pub struct EventoJuegoIniciado;
+
+#[derive(Message)]
+pub struct EventoJuegoReiniciado;
+
+#[derive(Message)]
+pub struct EventoLlegadaMeta;

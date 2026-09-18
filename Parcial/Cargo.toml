@@ -1,9 +1,22 @@
-[package]
+﻿[package]
 name = "Parcial"
 version = "0.1.0"
 edition = "2024"
 
 [dependencies]
 
-bevy = { version = "0.19", features = ["mp3"] }
+bevy = { version = "0.19", default-features = false, features = [
+      "2d",
+      "bevy_winit",
+      "audio",
+      "mp3",
+      "wav",
+      "keyboard",
+      "mouse",
+      "ui",
+    ] }
 hound = "3.5.1"
+image = "0.25"
+
+[dev-dependencies]
+image = "0.25"
